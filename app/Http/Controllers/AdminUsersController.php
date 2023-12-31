@@ -17,7 +17,7 @@ class AdminUsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::paginate(3);
 
         return view('admin.users.index', compact(['users']));
     }
@@ -39,7 +39,8 @@ class AdminUsersController extends Controller
         $user = $request->all();
         $user['password'] = Hash::make('Admin123');
         User::create($user);
-
+        ;
+        
         Session::flash('admin_flash', 'User created successfully.');
         return redirect(route('admin-users'));
     }
