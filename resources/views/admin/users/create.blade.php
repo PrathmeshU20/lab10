@@ -35,7 +35,7 @@
                 @endforeach
             </select>
         </div>
-
+        <br>
         <div class="block">
             <x-primary-button type="submit">Create</x-primary-button>
         </div>
