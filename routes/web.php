@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminUsersController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,9 +19,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', [
+    WelcomeController::class, 'index'
+])->name('welcome');
+
+Route::get('/posts/{id}', [
+    WelcomeController::class, 'show'
+])->name('post-show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
