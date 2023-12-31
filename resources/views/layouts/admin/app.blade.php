@@ -53,6 +53,27 @@
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
                         >Admin Home</a
                     >
+
+                    <a
+                        href="{{ route('admin-users') }}"
+                        class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
+                        >All Users</a
+                    >
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
+                        >Create User</a
+                    >
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
+                        >All Posts</a
+                    >
+                    <a
+                        href="#"
+                        class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
+                        >Create Post</a
+                    >
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
                         <a :href="route('logout')"
