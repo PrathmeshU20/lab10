@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Our Articles @if(isset($title)) {{ ' | '.$title}} @endif</title>
+        <title>Book Reviews @if(isset($title)) {{ ' | '.$title}} @endif</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -54,6 +54,7 @@
                         >Admin Home</a
                     >
 
+                    @if(Auth::user()->isAdmin())
                     <a
                         href="{{ route('admin-users') }}"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
@@ -64,6 +65,7 @@
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
                         >Create User</a
                     >
+                    @endif
                     <a
                         href="{{ route('admin-categories') }}"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
@@ -76,12 +78,12 @@
                         >Create Category</a
                     >
                     <a
-                        href="#"
+                        href="{{ route('admin-posts') }}"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
                         >All Posts</a
                     >
                     <a
-                        href="#"
+                        href="{{ route('admin-posts-create') }}"
                         class="block px-4 py-2 hover:bg-indigo-800 rounded-md"
                         >Create Post</a
                     >
