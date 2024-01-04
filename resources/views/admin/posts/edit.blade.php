@@ -11,12 +11,12 @@
             <label for="name">{{ __('Title') }}</label>
             <x-text-input id="title" class="block mt-1 w-full"
                 type="text" name="title" required autofocus autocomplete="title"
-                :value="$post->title" />
+                :value="$post->title" style="background-color: white; color:black "/>
         </div>
         <!-- Category -->
         <div class="p-2">
             <label for="category_id">{{ __('Category') }}</label>
-            <select name="category_id" id="category_id" class="block">
+            <select name="category_id" id="category_id" class="block rounded">
                 <option disabled>Select a category</option>
                 @foreach ($categories as $category)
                 <option value="{{ $category->id }}" {{ $category->id == $post->category->id ? 'selected' : '' }}>{{ $category->name }}</option>

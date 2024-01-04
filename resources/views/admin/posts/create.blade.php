@@ -8,13 +8,13 @@
         <!-- Title -->
         <div class="p-2">
             <label for="name">{{ __('Title') }}</label>
-            <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" required autofocus autocomplete="title" />
+            <x-text-input id="title" class="block mt-1 w-full" type="text" name="title" required autofocus autocomplete="title" style="background-color: white; color:black "/>
         </div>
 
         <!-- Category -->
-        <div class="p-2">
+        <div class="p-2 " >
             <label for="category_id">{{ __('Category') }}</label>
-            <select name="category_id" id="category_id" class="block">
+            <select name="category_id" id="category_id" class="block rounded" >
                 <option disabled selected>Select a category</option>
                 @foreach ($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -39,5 +39,5 @@
         </div>
 
     </form>
-    
+
 </x-admin-layout>

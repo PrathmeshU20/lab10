@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Book Reviews @if(isset($title)) {{ ' | '.$title}} @endif</title>
+        <title>Movie Bloggers @if(isset($title)) {{ ' | '.$title}} @endif</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -17,9 +17,9 @@
         {{ $scripts }}
         @endif
     </head>
-    <body class="antialiased min-h-screen lg:flex" x-data="{open: false}">
+    <body class="antialiased min-h-screen lg:flex" x-data="{open: false}" style="background-color: #cdc6c6">
         <nav
-            class="absolute inset-0 transform lg:transform-none lg:opacity-100 duration-200 lg:relative z-10 w-80 bg-indigo-900 text-white h-screen p-3"
+            class="absolute inset-0 transform lg:transform-none lg:opacity-100 duration-200 lg:relative z-10 w-80 bg-indigo-900 text-white h-screen p-3" style="background-color: #1e1e1e"
             :class="{'translate-x-0 ease-in opacity-100':open === true, '-translate-x-full ease-out opacity-0': open === false}"
         >
             <div class="flex justify-between">
@@ -101,7 +101,7 @@
             </ul>
         </nav>
         <div class="relative z-0 lg:flex-grow">
-            <header class="flex bg-gray-700 text-white items-center px-3">
+            <header class="flex bg-gray-700 text-white items-center px-3" style="background-color: #686464;">
                 <button
                     class="p-2 focus:outline-none focus:bg-gray-600 hover:bg-gray-600 rounded-md lg:hidden"
                     @click="open = true"

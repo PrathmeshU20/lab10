@@ -13,15 +13,15 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans bg-gray-100">
-        <div class="container mx-auto p-8">
+    <body class="font-sans-serif bg-pink-100 "  style="background-color:#cdc6c6;" >
+
             <!-- Header -->
             @if (isset($header))
-            <div class="text-4xl font-bold mb-8 text-center">
+
                 <a href="/">{{ $header }}</a>
-            </div>
+
             @endif
             {{ $slot }}
-        </div>
+
     </body>
 </html>

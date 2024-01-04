@@ -1,6 +1,6 @@
 <x-guest-layout>
     <x-slot name="header">
-        {{ __('Our Articles') }}
+        {{ __('Movie Bloggers') }}
     </x-slot>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         @if($post)

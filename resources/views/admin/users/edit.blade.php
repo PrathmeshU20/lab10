@@ -9,19 +9,19 @@
         <!-- Name -->
         <div class="p-2">
             <label for="name">{{ __('Name') }}</label>
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="$user->name" required autofocus autocomplete="name" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="$user->name" required autofocus autocomplete="name" style="background-color: white; color:black "/>
         </div>
 
         <!-- Email -->
         <div class="p-2">
             <label for="email">{{ __('Email') }}</label>
-            <x-text-input id="email" class="block mt-1 w-full" type="text" name="email" :value="$user->email" required autofocus autocomplete="email" />
+            <x-text-input id="email" class="block mt-1 w-full" type="text" name="email" :value="$user->email" required autofocus autocomplete="email" style="background-color: white; color:black "/>
         </div>
 
         <!-- Active -->
         <div class="p-2">
             <label for="active">{{ __('Active') }}</label>
-            <select name="active" id="active">
+            <select name="active" id="active" class="rounded">
                 <option disabled>Select a status</option>
                 <option value="1" {{ $user->active == 1 ? 'selected' : '' }}>Yes</option>
                 <option value="2" {{ $user->active == 2 ? 'selected' : '' }}>No</option>
@@ -31,7 +31,7 @@
         <!-- Role -->
         <div>
             <label for="role_id">{{ __('Role') }}</label>
-            <select name="role_id" id="role_id">
+            <select name="role_id" id="role_id" class="rounded">
                 <option disabled>Select a role</option>
                 @foreach ($roles as $role)
                 <option value="{{ $role->id }}" {{ $role->id == $user->role->id ? 'selected' : '' }}>{{ $role->name }}</option>
